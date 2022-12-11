@@ -127,8 +127,8 @@
 }
 
 .book__modal {
+  transition: 2s;
   display: none;
-  z-index: 1;
   justify-content: center;
   overflow: hidden;
   position: fixed;
@@ -136,7 +136,7 @@
   min-width: 100vw;
   left: 0;
   top: 0;
-  padding-top: 100px; /* Location of the box */
+  padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .book__modal--closebtn {
@@ -170,6 +170,7 @@
 }
 .book__modal--container {
   margin: 10px;
+  z-index: 2;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -181,6 +182,12 @@
   border-radius: 40px;
   overflow: auto;
   border: 5px solid #2ec4b6;
+}
+@media only screen and (max-width: 650px) {
+  .book__modal--container {
+    height: 90%;
+    width: 90%;
+  }
 }
 .book__modal--img {
   width: 150px;

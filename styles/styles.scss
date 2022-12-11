@@ -132,6 +132,8 @@
 }
 
 .book__modal {
+  transition: 2s;
+
   &--closebtn {
     align-self: flex-end;
     margin-right: 10%;
@@ -162,7 +164,6 @@
     text-decoration: none;
   }
   display: none;
-  z-index: 1;
   justify-content: center;
   overflow: hidden;
   position: fixed;
@@ -170,11 +171,17 @@
   min-width: 100vw;
   left: 0;
   top: 0;
-  padding-top: 100px; /* Location of the box */
+  padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.4);
 
   &--container {
+    @media only screen and (max-width: 650px) {
+      height: 90%;
+      width: 90%;
+    }
+
     margin: 10px;
+    z-index: 2;
     padding: 10px;
     display: flex;
     flex-direction: column;
