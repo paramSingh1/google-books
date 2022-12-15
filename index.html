@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Reeds</title>
+  </head>
+  <body>
+    <div class="pageContainer">
+      <div class="landing">
+        <h1>Reeds.</h1>
+        <p>Search Engine For Good Reads</p>
+        <div class="landing__search">
+          <form class="landing__search--form">
+            <input
+              placeholder="start here..."
+              type="text"
+              name="search"
+              class="landing__search--form--input"
+              id="landing__search--form--input"
+            />
+            <button class="landing__search--form--btn">Search</button>
+            <!-- Status and error messages are inserted here. -->
+            <p class="status"></p>
+          </form>
+        </div>
+      </div>
+      <div class="book__modal"></div>
+
+      <div class="results__container"></div>
+    </div>
+  </body>
+  <script type="module" src="./scripts/script.js" defer></script>
+  <script type="module" src="./scripts/dom.js" defer></script>
+</html>

@@ -1,0 +1,215 @@
+.pageContainer {
+  width: 100vw;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.status {
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  font-size: medium;
+}
+
+.landing {
+  background-color: #2ec4b6;
+  color: white;
+  border-radius: 40px;
+  margin: 20px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #cbf3f0;
+}
+.landing__search {
+  padding: 20px;
+}
+.landing__search--form--input {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #2ec4b6;
+  color: white;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.landing__search--form--input::placeholder {
+  color: #cbf3f0;
+}
+.landing__search--form--btn {
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #2ec4b6;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.landing__search--form--btn:hover {
+  transition: 450ms ease-in-out;
+  background-color: #cbf3f0;
+  color: #2ec4b6;
+  cursor: pointer;
+}
+
+.results__container {
+  margin: 10px;
+  background-color: whit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book__container {
+  background-color: #ffbf69;
+  border: 2px solid #ff9f1c;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px #cbf3f0 black;
+  border-radius: 30px;
+}
+.book__container--img {
+  height: 200px;
+  width: 150px;
+  padding: 10px;
+  margin-right: 5px;
+  border-right: 2px solid #ff9f1c;
+  border-bottom: 2px solid #ff9f1c;
+  box-shadow: 20px 25px 13px -2px rgba(61, 59, 59, 0.54);
+  -webkit-box-shadow: 20px 25px 13px -2px rgba(61, 59, 59, 0.54);
+  -moz-box-shadow: 20px 25px 13px -2px rgba(61, 59, 59, 0.54);
+}
+.book__container--right {
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+}
+.book__container--desc {
+  padding: 5px;
+  overflow: hidden;
+}
+.book__container--btn {
+  padding: 10px;
+  justify-self: flex-end;
+  border: 1px solid #ff9f1c;
+  background-color: #2ec4b6;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.book__container--btn:hover {
+  cursor: pointer;
+}
+
+.book__container:hover {
+  background-color: #cbf3f0;
+  color: #ff9f1c;
+  transition: 400ms;
+  box-shadow: 5px 16px 13px 15px rgba(61, 59, 59, 0.8);
+  -webkit-box-shadow: 5px 16px 13px 15px rgba(61, 59, 59, 0.8);
+  -moz-box-shadow: 5px 16px 13px 15px rgba(61, 59, 59, 0.8);
+}
+
+.book__modal {
+  transition: 2s;
+  display: none;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.book__modal--closebtn {
+  align-self: flex-end;
+  margin-right: 10%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ff9f1c;
+  background-color: #2ec4b6;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.book__modal--closebtn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #2ec4b6;
+}
+.book__modal--btn {
+  border: 1px solid #ff9f1c;
+  background-color: #2ec4b6;
+  color: white;
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.book__modal--btn > a {
+  color: white;
+  text-decoration: none;
+}
+.book__modal--container {
+  margin: 10px;
+  z-index: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 80%;
+  width: 50%;
+  border-radius: 40px;
+  overflow: auto;
+  border: 5px solid #2ec4b6;
+}
+@media only screen and (max-width: 650px) {
+  .book__modal--container {
+    height: 90%;
+    width: 90%;
+  }
+}
+.book__modal--img {
+  width: 150px;
+  height: 200px;
+}
+.book__modal--category {
+  text-align: left;
+  font-weight: bold;
+}
+.book__modal--title {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.book__modal--desc {
+  border: 2px solid #ff9f1c;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  max-height: 200px;
+  width: 80%;
+  overflow: auto;
+  width: 60%;
+}
